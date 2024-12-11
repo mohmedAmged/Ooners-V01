@@ -1,0 +1,68 @@
+.walletTotalBalance__card{
+    background: #ffff;
+    box-shadow: 0px 4px 13px 0px #0000001A;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.walletTotalBalanceInfo p{
+color: #000000;
+text-transform: capitalize;
+font-size: 16px;
+margin-bottom: 20px;
+}
+.walletTotalBalanceInfo h2{
+    color: #000000;
+    text-transform: capitalize;
+    font-size: 64px;
+}
+.walletTotalBalanceInfo h2 .currency{
+font-size: 32px;
+font-weight: 300;
+line-height: 72px;
+}
+.walletActionsHandler{
+    display: flex;
+    justify-content: end;
+}
+.walletActions button{
+    width: 253px;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    transition: all ease-in-out .3s;
+    border-radius: 10px;
+}
+.walletActions button:hover{
+    /* text-align: end; */
+    background-color: #0a57b4;
+    color: #fff;
+}
+.btnDeposit{
+    background-color: #1D74DB;
+    border: 1px solid #1D74DB;
+    color: #ffff;
+    margin-bottom: 10px;
+}
+.btnWithdraw{
+    background: transparent;
+    border: 1px solid #1D74DB;
+    color: #000;
+}
+
+@media screen and (max-width: 600px) {
+    .walletTotalBalanceInfo h2{
+        font-size: 22px;
+    }
+    .walletTotalBalanceInfo p{
+        font-size: 16px;
+    }
+    .walletActions button{
+        width: 123px;
+    }
+    .walletTotalBalanceInfo h2 .currency{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,29 @@
+.transactionsHeading{
+    font-size: 36px;
+    line-height: 54px;
+    margin-bottom: 20px;
+}
+.walletTransactionsCard{
+    box-shadow: 0px 4px 13px 0px #0000001A;
+    border-radius: 20px;
+    padding: 30px;
+}
+.cardFilters ul{
+    border-bottom: 1px solid #00000036;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+.cardFilterItem{
+font-size: 18px;
+font-weight: 400;
+line-height: 48px;
+text-align: left;
+}
+.cardInfo{
+    text-align: center;
+    padding: 40px 0;
+}
+.currenImage{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}

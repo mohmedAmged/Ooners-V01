@@ -1,0 +1,56 @@
+.paymentInfo__card{
+    box-shadow: 0px 4px 13px 0px #0000001A;
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+.paymentInfo__card h2{
+    text-transform: capitalize;
+font-size: 36px;
+font-weight: 500;
+line-height: 54px;
+text-align: left;
+margin-bottom: 20px;
+}
+.cardInfo{
+    display: flex;
+    margin-bottom: 20px;
+}
+.cardIcon{
+    width: 37px;
+    height: 37px;
+    margin-inline-end: 10px;
+}
+.cardInfo p{
+text-transform: capitalize;
+font-size: 18px;
+font-weight: 400;
+text-align: left;
+}
+.cardActions button{
+    text-transform: capitalize;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 12px;
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    transition: all ease-in-out .3s;
+}
+.cardActions button:hover{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+@media screen and (max-width:600px) {
+    .walletPaymentInfo__cards{
+        gap: 40px;
+    }
+    .paymentInfo__card h2{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .cardInfo p{
+        font-size: 16px;
+    }
+}
