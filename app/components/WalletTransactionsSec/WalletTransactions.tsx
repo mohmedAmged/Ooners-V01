@@ -3,8 +3,12 @@ import styles from './walletTransactions.module.css'
 import Link from 'next/link'
 import currencyIcon from '../../imgs/wallet/iconDollar.png'
 import Image from 'next/image'
+
+interface TransactionFilterItem {
+    item: string; 
+}
 export default function WalletTransactions() {
-    const transactionsFilterItems = [
+    const transactionsFilterItems : TransactionFilterItem[] = [
         {
             item: 'Type',
         },
