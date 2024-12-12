@@ -1,0 +1,15 @@
+.btnNavigation{
+    background: rgba(255, 255, 255, 0);
+    color: #1D74DB;
+    border: 1px solid #1D74DB;
+}
+.btnNavigation:hover{
+    background-color: #1D74DB;
+    color: #fff;
+    border: 1px solid #1D74DB;
+    transition: all ease-in-out 0.3s;
+}
+.textPaginate{
+    color: #1D74DB;
+    font-size: 24px;
+}

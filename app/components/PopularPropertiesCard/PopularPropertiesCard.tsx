@@ -1,5 +1,6 @@
 import Image from "next/image";
 import cardImage from '../../imgs/home/popularProperties/4a8650af84740fda285d887d978ec878.jpg';
+import Link from "next/link";
 
 export default function PopularPropertiesCard() {
     return (
@@ -21,7 +22,9 @@ export default function PopularPropertiesCard() {
                     </span>
                 </div>
                 <h2 className="text-lg text-[#000000] font-semibold">
+                    <Link href={'properties/Marina 2BR Chalet in SouthMED'}>
                     Marina 2BR Chalet in SouthMED
+                    </Link>
                 </h2>
                 <p className="text-[#0000008F]">
                     Talaat Moustafa Group (TMG) Holding | North Coast – Al Dabaa
