@@ -1,0 +1,99 @@
+
+.payAmount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+.payAmount p{
+font-size: 18px;
+font-weight: 500;
+line-height: 30px;
+text-align: left;
+color: #00000080;
+}
+.payAmount h2{
+font-size: 20px;
+font-weight: 600;
+line-height: 30px;
+color: #000;
+
+}
+.allPayDetails{
+    background: #F6F7F9;
+    padding: 20px 10px;
+    border-radius: 8px;
+}
+.singlePayDetail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.singlePayDetail:last-child{
+    margin-bottom: 0;
+}
+.singlePayDetail p{
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+color: #00000080;
+}
+.singlePayDetail h2{
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+color: #000;
+}
+.invest_handler{
+    margin-top: 30px;
+}
+.investLink{
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 500;
+line-height: 30px;
+text-align: left;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #5FA1F0;
+text-transform: capitalize;
+
+}
+.investPoints{
+    padding-inline-start: 10px;
+    margin-top: 20px;
+}
+.investPoints li{
+    list-style: disc;
+    margin-bottom: 15px;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+text-transform: capitalize;
+}
+.invest_handler button{
+    background: linear-gradient(90deg, #1D74DB 0%, #0F3E75 100%);
+border-radius: 8px;
+font-size: 20px;
+padding: 10px 20px;
+width: 100%;
+color: #fff;
+text-transform: capitalize;
+margin-top: 10px;
+}
+.invest_handler p{
+    margin: 15px 0;
+    text-align: center;
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+color: #00000080;
+}

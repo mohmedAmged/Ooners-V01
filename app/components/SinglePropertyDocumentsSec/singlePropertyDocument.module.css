@@ -1,0 +1,50 @@
+.singlePropertyDocument_handler{
+    box-shadow: 0px 4px 13px 0px #0000001A;
+    border-radius: 30px;
+    padding: 20px;
+}
+.singlePropertyDocument_handler h2{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+    text-transform: capitalize;
+}
+.docInfos{
+    display: flex;
+    align-items: center;
+}
+.docInfos span{
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+text-align: left;
+text-transform: capitalize;
+}
+.docsImage{
+    margin-inline-end: 20px;
+}
+.downloadICon{
+    cursor: pointer;
+}
+.allDocsAction{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.allDocsAction button{
+    width: 100%;
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 8px;
+    padding: 10px 30px;
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all ease-in-out .3s;
+}
+.allDocsAction button:hover{
+    background: #000;
+    color: #fff;
+}

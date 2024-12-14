@@ -1,3 +1,4 @@
+import SinglePropertyAllDetails from '@/app/components/SinglePropertyAllDetailsSec/SinglePropertyAllDetails';
 import SinglePropertyBadges from '@/app/components/SinglePropertyBadgesSec/SinglePropertyBadges';
 import SinglePropertyGallery from '@/app/components/SinglePropertyGallerySec/SinglePropertyGallery';
 import SinglePropertyHeader from '@/app/components/SinglePropertyHeaderSec/SinglePropertyHeader';
@@ -17,6 +18,7 @@ export default async function propertyPage({ params }: PropertyPageProps) {
         <SinglePropertyHeader propertyName={propertyName}/>
         <SinglePropertyGallery />
         <SinglePropertyBadges />
+        <SinglePropertyAllDetails />
     </>
   )
 }
