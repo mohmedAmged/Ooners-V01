@@ -8,10 +8,10 @@ interface PropertyPageParams {
     propertyName: string;
   }
   
-  interface PropertyPageProps {
-    params: PropertyPageParams;
-  }
-export default async function propertyPage({ params }: PropertyPageProps) {
+  // interface PropertyPageProps {
+  //   params: PropertyPageParams;
+  // }
+export default async function PropertyPage({ params }:  { params: PropertyPageParams }) {
     const propertyName = decodeURIComponent(params.propertyName);
   return (
     <>
