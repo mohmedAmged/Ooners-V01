@@ -6,17 +6,17 @@ interface NumberOfSharesProps {
 }
 
 const SinglePropertyNumOfShares: React.FC<NumberOfSharesProps> = ({ availableShares }) => {
-  const [shares, setShares] = useState(1);
+  const [shares, setShares] = useState(250);
 
   const handleIncrease = () => {
     if (shares < availableShares) {
-      setShares(shares + 1);
+      setShares(shares + 250);
     }
   };
 
   const handleDecrease = () => {
-    if (shares > 1) {
-      setShares(shares - 1);
+    if (shares > 250) {
+      setShares(shares - 250);
     }
   };
 
@@ -28,10 +28,10 @@ const SinglePropertyNumOfShares: React.FC<NumberOfSharesProps> = ({ availableSha
     <div className="w-full ">
       <div className="flex justify-between items-center mb-2">
         <label className="text-sm font-medium text-gray-700 flex items-center">
-          Number Of Shares <span className={`ml-1 text-gray-500 ${styles.iconHref}`}>ℹ️</span>
+        Investment Overview <span className={`ml-1 text-gray-500 ${styles.iconHref}`}>ℹ️</span>
         </label>
         <span className="text-sm font-medium text-gray-500">
-          {availableShares} Shares Available
+          Max €{availableShares}
         </span>
       </div>
 
@@ -41,7 +41,7 @@ const SinglePropertyNumOfShares: React.FC<NumberOfSharesProps> = ({ availableSha
             <input
             placeholder='..'
             type="range"
-            min="1"
+            min="€250"
             max={availableShares}
             value={shares}
             onChange={handleSliderChange}

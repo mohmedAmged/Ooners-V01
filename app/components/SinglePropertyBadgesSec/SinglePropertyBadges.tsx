@@ -16,7 +16,7 @@ export default function SinglePropertyBadges() {
     const badgeItems : BadgeCardItem[] =[
         {
             badgeName: 'UNIT PRICE',
-            badgeValue: '37,532,100 EGP', 
+            badgeValue: '€370,530', 
             icon: badgeIcon1
         },
         {

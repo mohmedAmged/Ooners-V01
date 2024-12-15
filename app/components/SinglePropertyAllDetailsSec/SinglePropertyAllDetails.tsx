@@ -72,7 +72,7 @@ export default function SinglePropertyAllDetails() {
       {/* Right Column */}
       <div className="col-span-12 lg:col-span-4 p-4 py-10 border border-gray-200 rounded-lg shadow-md bg-white">
         <>
-        <SinglePropertyNumOfShares availableShares={40}/>
+        <SinglePropertyNumOfShares availableShares={30000}/>
         <SinglePropertyPayDetails />
         </>
       </div>

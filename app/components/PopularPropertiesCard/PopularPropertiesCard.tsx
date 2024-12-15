@@ -32,20 +32,20 @@ export default function PopularPropertiesCard() {
                 <div className="bg-gray-50 p-5 rounded-lg shadow-sm">
                     <div className="grid grid-cols-1 gap-y-5">
                         <div className="flex justify-between text-sm text-[#000000] font-semibold">
-                            <span>Down Payment</span>
-                            <span className="font-semibold text-black">46,235 EGP</span>
+                            <span className="capitalize">purchase price</span>
+                            <span className="font-semibold text-black">€370,530 </span>
                         </div>
                         <div className="flex justify-between text-sm text-[#000000] font-semibold">
-                            <span>Installment</span>
-                            <span className="font-semibold text-black">3,624 EGP</span>
+                            <span className="capitalize">5 year total return</span>
+                            <span className="font-semibold text-black">49.84%</span>
                         </div>
                         <div className="flex justify-between text-sm text-[#000000] font-semibold">
-                            <span>Annual Installment</span>
-                            <span className="font-semibold text-black">30,831 EGP</span>
+                            <span className="capitalize">yearly investment return</span>
+                            <span className="font-semibold text-black">9.84%</span>
                         </div>
                         <div className="flex justify-between text-sm text-[#000000] font-semibold">
-                            <span>Expected Exit</span>
-                            <span className="font-semibold text-black">July 2029</span>
+                            <span className="capitalize">projected net yield</span>
+                            <span className="font-semibold text-black">5.4%</span>
                         </div>
                     </div>
                 </div>

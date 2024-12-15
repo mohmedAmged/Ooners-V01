@@ -11,10 +11,10 @@ export default function SinglePropertyPayDetails() {
             payName: 'Yearly investment return',
             payValue: '604'
         },
-        {
-            payName: 'Projected net yield',
-            payValue: 'EGP 650,000'
-        },
+        // {
+        //     payName: 'Projected net yield',
+        //     payValue: 'EGP 650,000'
+        // },
     ]
   return (
     <div className={`${styles.singlePropertyPayDetails_handler}`}> 
@@ -23,7 +23,7 @@ export default function SinglePropertyPayDetails() {
             Pay Amount
             </p>
             <h2>
-            EGP 44,047
+            € 250
             </h2>
         </div>
         <div className={`${styles.allPayDetails}`}>

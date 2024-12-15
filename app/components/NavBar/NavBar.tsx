@@ -3,7 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import logo from '@/public/image1.svg';
+// import logo from './public/oonersLogog.svg';
+import logo2 from '../../imgs/navbarImgs/logooonp.png'
+import logo3 from '../../imgs/navbarImgs/Untitled-3-01.png'
 import MainWhiteButton from '../MainWhiteButton/MainWhiteButton';
 
 export default function NavBar() {
@@ -15,16 +17,21 @@ export default function NavBar() {
     };
 
     const isActive = (path: string) => pathname.includes(path);
-
+const imgSrc = pathname === '/dashboard/home' ? logo2 : logo3
     return (
         <nav className={`border-gray-200 w-full overflow-x-hidden ${pathname === '/dashboard/home' ? 'bg-transparent absolute top-0 z-50 left-0' : 'bg-[#f7f7f7]'}`}>
             <div className="container lg:max-w-6xl flex flex-wrap items-center justify-between mx-auto py-6 lg:py-10 md:py-8 sm:py-6 lg:px-6 md:px-6">
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <Image
-                        src={logo}
+                        src={imgSrc}
                         alt={'Ooners Logo'}
                         width={60}
-                        height={60}
+                        height={30}
+                        // className="w-100"
+                        style={{
+                            width: '100px',
+                            height: 'auto',
+                        }}
                     />
                 </Link>
                 <div className="flex items-center space-x-4 rtl:space-x-reverse">

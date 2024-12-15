@@ -10,7 +10,7 @@ export default function WalletTotalBalance() {
                 Total Balance
                 </p>
                 <h2>
-                29,475.00 <span className={styles.currency}>AED</span>
+                9,475.00 <span className={styles.currency}>€</span>
                 </h2>
             </div>
             <div className={` ${styles.walletActionsHandler}`}>
