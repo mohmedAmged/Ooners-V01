@@ -5,17 +5,20 @@ import SinglePropertyHeader from '@/app/components/SinglePropertyHeaderSec/Singl
 import React from 'react'
 
 interface PropertyPageParams {
-    propertyName: string;
-  }
-  
-  // interface PropertyPageProps {
-  //   params: PropertyPageParams;
-  // }
-export default async function PropertyPage({ params }:  { params: PropertyPageParams }) {
-    const propertyName = decodeURIComponent(params.propertyName);
+  propertyName: string;
+}
+
+interface PropertyPageProps {
+  params: Promise<PropertyPageParams>;
+}
+export default async function PropertyPage({ params }: PropertyPageProps) {
+  const {propertyName} =  await params;
+  const newPropertyName = decodeURIComponent(propertyName);
+    console.log(newPropertyName);
+    
   return (
     <>
-        <SinglePropertyHeader propertyName={propertyName}/>
+        <SinglePropertyHeader propertyName={newPropertyName}/>
         <SinglePropertyGallery />
         <SinglePropertyBadges />
         <SinglePropertyAllDetails />
