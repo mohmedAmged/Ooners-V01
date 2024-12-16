@@ -4,8 +4,8 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 // import logo from './public/oonersLogog.svg';
-import logo2 from '../../imgs/navbarImgs/logooonp.png'
-import logo3 from '../../imgs/navbarImgs/Untitled-3-01.png'
+import logo2 from '../../imgs/navbarImgs/svgoonerslogowhite.svg'
+import logo3 from '../../imgs/navbarImgs/svgoonerslogodark.svg'
 import MainWhiteButton from '../MainWhiteButton/MainWhiteButton';
 
 export default function NavBar() {
