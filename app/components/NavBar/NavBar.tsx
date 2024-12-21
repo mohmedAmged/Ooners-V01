@@ -17,7 +17,7 @@ export default function NavBar() {
     };
 
     const isActive = (path: string) => pathname.includes(path);
-const imgSrc = pathname === '/dashboard/home' ? logo2 : logo3
+    const imgSrc = pathname === '/dashboard/home' ? logo2 : logo3
     return (
         <nav className={`border-gray-200 w-full overflow-x-hidden ${pathname === '/dashboard/home' ? 'bg-transparent absolute top-0 z-50 left-0' : 'bg-[#f7f7f7]'}`}>
             <div className="container lg:max-w-6xl flex flex-wrap items-center justify-between mx-auto py-6 lg:py-10 md:py-8 sm:py-6 lg:px-6 md:px-6">

@@ -1,0 +1,67 @@
+.singlePropInvest__handler{
+    margin-top: 40px;
+}
+.singlePropInvest__handler h2{
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+text-align: left;
+text-transform: capitalize;
+margin-bottom: 20px;
+}
+.investDetailsInfo{
+    background: #F7F7F7;
+    border-radius: 13px;
+    padding: 15px;
+}
+.investDetailsHead,
+.investDetailsItem,
+.investExpDate
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.investDetailsHead p,
+.investDetailsItem p,
+.investExpDate p
+{
+font-size: 16px;
+font-weight: 600;
+line-height: 30px;
+text-align: left;
+text-transform: capitalize;
+color: #00000080;
+}
+.investDetailsHead span,
+.investDetailsItem span,
+.investExpDate span
+{
+font-size: 16px;
+font-weight: 600;
+line-height: 30px;
+text-align: left;
+color: #000;
+}
+.investDetailsItem span
+{
+    font-weight: 400 !important;
+}
+.investNote{
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+text-transform: capitalize;
+color: #00000080;
+margin-bottom: 15px;
+
+}
+.investDetailsBody{
+    padding-inline-start: 10px;
+}
+.investDetailsItem{
+    margin: 15px 0;
+}
+

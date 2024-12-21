@@ -22,8 +22,8 @@ export default function PopularPropertiesCard() {
                     </span>
                 </div>
                 <h2 className="text-lg text-[#000000] font-semibold">
-                    <Link href={'properties/Marina 2BR Chalet in SouthMED'}>
-                    Marina 2BR Chalet in SouthMED
+                    <Link href={'properties/marassi 2BR Chalet in SouthMED'}>
+                    marassi 2BR Chalet in SouthMED
                     </Link>
                 </h2>
                 <p className="text-[#0000008F]">

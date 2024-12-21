@@ -1,8 +1,22 @@
+"use client"
 import React from 'react'
 import styles from './singlePropertyPay.module.css'
 import Link from 'next/link'
-export default function SinglePropertyPayDetails() {
-    const payDetailsItems = [
+
+import Cookies from 'js-cookie'
+import { useRouter } from 'next/navigation'
+interface PayDetailsItem {
+    payName: string;
+    payValue: string;
+}
+export default  function SinglePropertyPayDetails({propertyName } : {propertyName: string}) {
+    const router = useRouter();
+
+    const handleInvestClick = () => {
+      Cookies.set('propertyNameStore', propertyName); // Assuming you have cookiesData defined
+      router.push('/dashboard/invest'); 
+    };
+    const payDetailsItems : PayDetailsItem[] = [
         {
             payName: '5 Year total return',
             payValue: '9.6%'
@@ -11,10 +25,6 @@ export default function SinglePropertyPayDetails() {
             payName: 'Yearly investment return',
             payValue: '604'
         },
-        // {
-        //     payName: 'Projected net yield',
-        //     payValue: 'EGP 650,000'
-        // },
     ]
   return (
     <div className={`${styles.singlePropertyPayDetails_handler}`}> 
@@ -52,7 +62,7 @@ export default function SinglePropertyPayDetails() {
                 These amounts are inclusive of Nawy fees.
                 </li>
             </ul>
-            <button type='button'>
+            <button type='button' onClick={handleInvestClick}>
             Invest now
             </button>
             <p>
