@@ -1,6 +1,7 @@
 import Image from "next/image";
 import cardImage from '../../imgs/home/popularProperties/4a8650af84740fda285d887d978ec878.jpg';
 import Link from "next/link";
+import SinglePropertyRangeInfo from "../SinglePropertyRangeInfoSec/SinglePropertyRangeInfo";
 
 export default function PopularPropertiesCard() {
     return (
@@ -29,6 +30,7 @@ export default function PopularPropertiesCard() {
                 <p className="text-[#0000008F]">
                     Talaat Moustafa Group (TMG) Holding | North Coast – Al Dabaa
                 </p>
+                <SinglePropertyRangeInfo ispadding="false"/>
                 <div className="bg-gray-50 p-5 rounded-lg shadow-sm">
                     <div className="grid grid-cols-1 gap-y-5">
                         <div className="flex justify-between text-sm text-[#000000] font-semibold">

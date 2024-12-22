@@ -22,7 +22,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
   return (
     <>
         <SinglePropertyHeader propertyName={newPropertyName}/>
-        <SinglePropertyRangeInfo />
+        <SinglePropertyRangeInfo ispadding='true'/>
         <SinglePropertyGallery />
         <SinglePropertyBadges />
         <SinglePropertyAllDetails propertyName={newPropertyName}/>

@@ -1,6 +1,12 @@
 .sliderHandler{
     width: 80%;
-    padding-inline-start: 40px;
+    /* padding-inline-start: 40px; */
+}
+.addPad{
+    padding-inline-start: 60px;
+}
+.removePad{
+    padding-inline-start: 0;
 }
 .sliderLabels{
     display: flex;

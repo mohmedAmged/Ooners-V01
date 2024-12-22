@@ -4,3 +4,9 @@
 .paymentMethods_InputItem {
     margin-bottom: 20px;
 }
+.paymentMethods_InputItem label{
+    margin-inline-start: 10px;
+font-size: 18px;
+font-weight: 400;
+text-transform: capitalize;
+}

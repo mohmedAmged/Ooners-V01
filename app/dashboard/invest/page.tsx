@@ -12,7 +12,7 @@ export default async function InvestPage() {
     
   return (
     <>
-        <ChoosePaymentDetails />
+        <ChoosePaymentDetails propertyName={propertyName ?? ''}/>
     </>
   )
 }

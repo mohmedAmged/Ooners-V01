@@ -1,25 +1,28 @@
 import React from 'react'
 import PaymentMethodsTypes from '../PaymentMethodsTypesSec/PaymentMethodsTypes'
-
-export default function ChoosePaymentDetails() {
+import styles from './choosePaymentDetails.module.css'
+import OtherPaymentMethod from '../OtherPaymentMethodSec/OtherPaymentMethod'
+import CartPaymentDetails from '../CartPaymentDetailsSec/CartPaymentDetails'
+export default function ChoosePaymentDetails({ propertyName }: { propertyName: string }) {
   return (
     <section>
         <div className='singlePropertyAllDetails__handler container py-16 lg:max-w-6xl px-6 m-auto'>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
               {/* Left Column */}
-                <div className="col-span-12 lg:col-span-5">
-                    <h2>
+                <div className={`col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6`}>
+                    <h2 className={styles.rightSideHead}>
                         Paymet
                     </h2>
-                    <p>
+                    <p className={styles.rightSideInfo}>
                     Select a payment method
                     </p>
                     <PaymentMethodsTypes />
+                    <OtherPaymentMethod />
                 </div>
 
                 {/* Right Column */}
-                <div className="col-span-12 lg:col-span-7 p-4 py-10 border border-gray-200 rounded-lg shadow-md bg-white">
-                
+                <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 p-4 py-10">
+                  <CartPaymentDetails propertyName={propertyName}/>
                 </div>
             </div>
         </div>

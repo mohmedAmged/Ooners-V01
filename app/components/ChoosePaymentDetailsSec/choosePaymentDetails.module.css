@@ -1,0 +1,13 @@
+.rightSideHead{
+font-size: 48px;
+font-weight: 700;
+text-transform: capitalize;
+color: #424347;
+margin-bottom: 20px;
+}
+.rightSideInfo{
+font-size: 24px;
+font-weight: 600;
+text-transform: capitalize;
+color: #424347;
+}

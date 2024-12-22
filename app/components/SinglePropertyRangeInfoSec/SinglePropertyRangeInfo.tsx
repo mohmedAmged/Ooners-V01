@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './singlePropertyRange.module.css'
-export default function SinglePropertyRangeInfo() {
+export default function SinglePropertyRangeInfo({ ispadding }: { ispadding: string }) {
   return (
-    <div className={`${styles.singlePropertyRange__handler} container py-4 lg:max-w-6xl px-6 m-auto`}>
-        <div className={`${styles.sliderHandler}`}>
+    <div className={`${styles.singlePropertyRange__handler} container py-4 lg:max-w-6xl m-auto`}>
+        <div className={`${styles.sliderHandler} ${ispadding === 'true' ? styles.addPad : styles.removePad}`}>
             <div className={`${styles.sliderLabels}`}>
                 <label htmlFor="">AED 1,179,000</label>
                 <label htmlFor="">60% funded (364 Investors)</label>

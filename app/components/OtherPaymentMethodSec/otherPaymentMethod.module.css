@@ -1,0 +1,15 @@
+.otherPaymentMethod__handler{
+    margin-top: 40px;
+}
+.otherPaymentMethod__handler p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: #666666;
+}
+.methodsItems{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
