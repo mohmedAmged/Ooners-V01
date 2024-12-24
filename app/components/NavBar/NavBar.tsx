@@ -102,7 +102,8 @@ export default function NavBar() {
                     </ul>
                 </div>
                 <div className="hidden md:block">
-                    <MainWhiteButton text="Invest" link="/dashboard/home" px={`${pathname === '/dashboard/home' ? 'px-6 text-white border-white hover:bg-white focus:ring-white hover:text-blue-900' : 'px-6 text-black border-black hover:bg-black focus:ring-black hover:text-white'} `} />
+                    <MainWhiteButton text="Sign up" link="/auth/register" px={`${pathname === '/dashboard/home' ? 'px-6 text-white border-white hover:bg-white focus:ring-white hover:text-blue-900' : 'px-6 text-black border-black hover:bg-black focus:ring-black hover:text-white'} `} />
+                    <MainWhiteButton text="Login" link="/auth/login" px={`${pathname === '/dashboard/home' ? 'px-6 text-white border-white hover:bg-white focus:ring-white hover:text-blue-900' : 'px-6 text-black border-black hover:bg-black focus:ring-black hover:text-white'} `} />
                 </div>
             </div>
         </nav>

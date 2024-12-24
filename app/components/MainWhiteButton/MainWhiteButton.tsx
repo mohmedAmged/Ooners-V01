@@ -15,7 +15,7 @@ export default function MainWhiteButton({ text, link, py, px }: MainWhiteButtonP
                 bg-transparent border   font-semibold rounded-lg 
                 transition duration-300 shadow-md 
                 focus:outline-none focus:ring-2 focus:ring-offset-2  
-                
+                me-2
                 ${px ? px : 'px-6'} ${py ? py : 'py-2'} 
                 `}
         >
