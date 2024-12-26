@@ -3,7 +3,6 @@
 import usePropertiesStore from "@/app/store/AllProperties";
 import { useEffect } from "react";
 import PopularPropertiesCard from "../PopularPropertiesCard/PopularPropertiesCard";
-import PropertyDetails from "@/app/interfaces/propertyDetailsTypes";
 
 export default function AllProperties() {
     const { properties, fetchProperties } = usePropertiesStore();
