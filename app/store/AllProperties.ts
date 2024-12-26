@@ -37,9 +37,9 @@ interface Property {
   expected_yearly_rent: string;
   net_yearly_income: string;
   projected_net_yield: string;
-  number_of_investors: number;
+  number_of_investors: string;
   number_of_shares: number;
-  price_per_share: number;
+  price_per_share: string;
   available_amount: string;
   funded_amount: string;
   funded_percentage: string;

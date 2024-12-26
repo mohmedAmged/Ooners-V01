@@ -3,9 +3,19 @@ import Image from "next/image";
 // import cardImage from '../../imgs/home/popularProperties/4a8650af84740fda285d887d978ec878.jpg';
 import Link from "next/link";
 import SinglePropertyRangeInfo from "../SinglePropertyRangeInfoSec/SinglePropertyRangeInfo";
-import PropertyDetails from "@/app/interfaces/propertyDetailsTypes";
-
-  const PopularPropertiesCard: React.FC<PropertyDetails> = ({
+interface PopularPropertiesCard {
+    id: number;
+    title: string;
+    main_image: string;
+    short_description: string;
+    purchase_price: string;
+    net_yearly_income: string;
+    funded_percentage: string;
+    funded_amount: string;
+    number_of_investors: string;
+    min_investment_amount: string;
+}
+  const PopularPropertiesCard: React.FC<PopularPropertiesCard> = ({
     id,
     title,
     main_image,
