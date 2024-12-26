@@ -8,10 +8,18 @@ import offIcon5 from '../../imgs/singleProperty/solar_shop-outline.png'
 import offIcon6 from '../../imgs/singleProperty/fluent_people-community-32-regular.png'
 import SinglePropertyOffer from '../SinglePropertyOffersSec/SinglePropertyOffer'
 import SinglePropertyDocument from '../SinglePropertyDocumentsSec/SinglePropertyDocument'
-import SinglePropertyNumOfShares from '../SinglePropertyNumOFSharesSec/SinglePropertyNumOfShares'
 import SinglePropertyPayDetails from '../SinglePropertyPayDetailsSec/SinglePropertyPayDetails'
-import SinglePropertyInvestDetails from '../SinglePropertyInvestDetailsSec/SinglePropertyInvestDetails'
-export default function SinglePropertyAllDetails({propertyName}:{propertyName: string}) {
+import PropertyDetails from '@/app/interfaces/propertyDetailsTypes'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
+interface SinglePropertyAllDetailsProps {
+  propertyDetails: PropertyDetails | null;
+  propertyName: number; 
+}
+const SinglePropertyAllDetails: React.FC<SinglePropertyAllDetailsProps> = ({ 
+  propertyDetails, 
+  propertyName 
+}) =>  {
   const offersItems = [
     {
       offerIcon:offIcon1,
@@ -38,23 +46,29 @@ export default function SinglePropertyAllDetails({propertyName}:{propertyName: s
     },
 
   ]
-  const documentItems = [
-    {
-      docName: 'Unit & Project Details'
-    },
-    {
-      docName: 'Investment Details'
-    },
-    {
-      docName: 'Ooners Fees'
-    },
-    {
-      docName: 'Late and Missed Payments'
-    },
-    {
-      docName: 'Ownership Contract Draft'
-    },
-  ]
+  // const documentItems = [
+  //   {
+  //     docName: 'Unit & Project Details'
+  //   },
+  //   {
+  //     docName: 'Investment Details'
+  //   },
+  //   {
+  //     docName: 'Ooners Fees'
+  //   },
+  //   {
+  //     docName: 'Late and Missed Payments'
+  //   },
+  //   {
+  //     docName: 'Ownership Contract Draft'
+  //   },
+  // ]
+  const documentItems = propertyDetails?.attachments?.map((attachment) => ({
+    docName: attachment.file_name,
+    file: attachment?.file
+  })) || [];
+  console.log(propertyDetails);
+  
   return (
     <section>
       <div className='singlePropertyAllDetails__handler container py-16 lg:max-w-6xl px-6 m-auto'>
@@ -73,9 +87,9 @@ export default function SinglePropertyAllDetails({propertyName}:{propertyName: s
               {/* Right Column */}
               <div className="col-span-12 lg:col-span-4 p-4 py-10 border border-gray-200 rounded-lg shadow-md bg-white">
                 <>
-                <SinglePropertyNumOfShares availableShares={30000}/>
-                <SinglePropertyPayDetails propertyName={propertyName}/>
-                <SinglePropertyInvestDetails />
+                {/* <SinglePropertyNumOfShares availableShares={30000}/> */}
+                <SinglePropertyPayDetails availableShares={30000} net_yearly_income={propertyDetails?.net_yearly_income ?? ''} propertyName={propertyName}/>
+                {/* <SinglePropertyInvestDetails /> */}
                 </>
               </div>
           </div>
@@ -83,3 +97,5 @@ export default function SinglePropertyAllDetails({propertyName}:{propertyName: s
     </section>
   )
 }
+export default SinglePropertyAllDetails;
+

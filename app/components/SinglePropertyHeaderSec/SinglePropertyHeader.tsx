@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './singlePropertyHeader.module.css'
-import logoProperty from '../../imgs/singleProperty/logoProperty.jpeg'
+import logoProperty from '../../imgs/singleProperty/new.png'
 import Image from 'next/image';
 
 interface SinglePropertyHeaderProps {
   propertyName: string;
+  propertyDescription: string;
 }
 
-const SinglePropertyHeader: React.FC<SinglePropertyHeaderProps> = ({ propertyName }) => {
+const SinglePropertyHeader: React.FC<SinglePropertyHeaderProps> = ({ propertyName, propertyDescription }) => {
   return (
     <section>
         <div className=' `singlePropertyHeader__handler container py-16 lg:max-w-6xl px-6 m-auto`'>
@@ -18,7 +19,7 @@ const SinglePropertyHeader: React.FC<SinglePropertyHeaderProps> = ({ propertyNam
                         {propertyName}
                     </h2>
                     <p>
-                    Talaat Moustafa Group (TMG) Holding | North Coast – Al Dabaa
+                      {propertyDescription}
                     </p>
                 </div>
             </div>

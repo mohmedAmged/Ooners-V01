@@ -1,15 +1,11 @@
-import SinglePropertyAllDetails from '@/app/components/SinglePropertyAllDetailsSec/SinglePropertyAllDetails';
-import SinglePropertyBadges from '@/app/components/SinglePropertyBadgesSec/SinglePropertyBadges';
-import SinglePropertyGallery from '@/app/components/SinglePropertyGallerySec/SinglePropertyGallery';
-import SinglePropertyHeader from '@/app/components/SinglePropertyHeaderSec/SinglePropertyHeader';
-import SinglePropertyRangeInfo from '@/app/components/SinglePropertyRangeInfoSec/SinglePropertyRangeInfo';
+import ShowSingleProperty from '@/app/components/ShowSinglePropertySec/ShowSingleProperty';
 import { Metadata } from 'next';
 import React from 'react'
 export const metadata: Metadata = {
   title: "single Property",
 };
 interface PropertyPageParams {
-  propertyName: string;
+  propertyName: number;
 }
 
 interface PropertyPageProps {
@@ -17,15 +13,9 @@ interface PropertyPageProps {
 }
 export default async function PropertyPage({ params }: PropertyPageProps) {
   const {propertyName} =  await params;
-  const newPropertyName = decodeURIComponent(propertyName);
-    console.log(newPropertyName);
   return (
     <>
-        <SinglePropertyHeader propertyName={newPropertyName}/>
-        <SinglePropertyRangeInfo ispadding='true'/>
-        <SinglePropertyGallery />
-        <SinglePropertyBadges />
-        <SinglePropertyAllDetails propertyName={newPropertyName}/>
+        <ShowSingleProperty newPropertyName={propertyName}/>
     </>
   )
 }

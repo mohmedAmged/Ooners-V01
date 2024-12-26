@@ -1,5 +1,5 @@
+import AllProperties from "@/app/components/AllPropertiesSec/AllProperties";
 import MainSectionHead from "@/app/components/MainSectionHead/MainSectionHead";
-import PopularPropertiesCard from "@/app/components/PopularPropertiesCard/PopularPropertiesCard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,9 +11,7 @@ export default function PropertiesPage() {
         <section className="py-16 flex content-center">
             <div className={`container lg:max-w-6xl px-6 m-auto`}>
                 <MainSectionHead heading="Available Properties" />
-                <PopularPropertiesCard />
-                <PopularPropertiesCard />
-                <PopularPropertiesCard />
+                <AllProperties />
             </div>
         </section>
     );

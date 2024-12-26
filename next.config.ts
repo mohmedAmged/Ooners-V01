@@ -1,7 +1,24 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'ooners.valureach.com',
+          port: '',
+          pathname: '/storage/**',
+          search: '',
+        },
+        {
+          protocol: 'https',
+          hostname: 'ooners.valureach.com',
+          port: '',
+          pathname: '/defaults/**',
+          search: '',
+        },
+      ],
+    },
 };
 
 export default nextConfig;

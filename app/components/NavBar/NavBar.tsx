@@ -29,7 +29,7 @@ export default function NavBar() {
                         height={30}
                         // className="w-100"
                         style={{
-                            width: '100px',
+                            width: '130px',
                             height: 'auto',
                         }}
                     />

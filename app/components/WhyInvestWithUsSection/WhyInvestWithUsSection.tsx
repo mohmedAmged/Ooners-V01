@@ -29,7 +29,7 @@ export default function WhyInvestWithUsSection() {
         <section>
             <div className="container lg:max-w-6xl px-6 m-auto py-16">
                 <MainSectionHead
-                    heading="Why invest with Ooners"
+                    heading="Why Invest with OONERS"
                     body="Investment decisions made easy, one share at a time"
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">

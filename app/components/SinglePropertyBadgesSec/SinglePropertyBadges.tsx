@@ -5,38 +5,51 @@ import badgeIcon2 from '../../imgs/singleProperty/carbon_area.png'
 import badgeIcon3 from '../../imgs/singleProperty/solar_bed-linear.png'
 import badgeIcon4 from '../../imgs/singleProperty/iconoir_bathroom.png'
 import Image from 'next/image'
-
+interface BadgeProps {
+    bedrooms: number;
+    bathrooms: number;
+    area: string;
+    unitPrice: string;
+    propertyType: string; 
+  }
 interface BadgeCardItem {
     badgeName: string;
     badgeValue: string;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     icon: any; 
 }
-export default function SinglePropertyBadges() {
+const SinglePropertyBadges: React.FC<BadgeProps> = ({ 
+    bedrooms, 
+    bathrooms, 
+    area, 
+    unitPrice, 
+    propertyType 
+  }) => {
+
     const badgeItems : BadgeCardItem[] =[
         {
             badgeName: 'UNIT PRICE',
-            badgeValue: '€370,530', 
+            badgeValue: unitPrice, 
             icon: badgeIcon1
         },
         {
             badgeName: 'Property Type',
-            badgeValue: 'Marina 2BR Chalet', 
+            badgeValue: propertyType, 
             icon: badgeIcon1
         },
         {
             badgeName: 'Area',
-            badgeValue: '136 m', 
+            badgeValue: area, 
             icon: badgeIcon2
         },
         {
             badgeName: 'Bedrooms',
-            badgeValue: '2 Beds', 
+            badgeValue: `${bedrooms} beds`, 
             icon: badgeIcon3
         },
         {
             badgeName: 'Bathrooms',
-            badgeValue: '2 Baths', 
+            badgeValue: `${bathrooms} Baths`, 
             icon: badgeIcon4
         },
     ]
@@ -64,3 +77,5 @@ export default function SinglePropertyBadges() {
     </section>
   )
 }
+export default SinglePropertyBadges;
+
