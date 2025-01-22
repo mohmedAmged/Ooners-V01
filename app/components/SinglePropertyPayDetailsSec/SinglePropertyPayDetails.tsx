@@ -4,6 +4,8 @@ import styles from './singlePropertyPay.module.css'
 import Link from 'next/link'
 import Cookies from 'js-cookie'
 import { useRouter } from 'next/navigation'
+import useCartStore from '@/app/store/AddToCart'
+import { toast } from 'react-toastify'
 interface PayDetailsItem {
     payName: string;
     payValue: string;
@@ -21,12 +23,15 @@ const SinglePropertyPayDetails: React.FC<propertyDetailsProps> = ({
     availableShares
 }) =>   {
     const router = useRouter();
+    const propertyID = propertyName;
+    // const handleInvestClick = () => {
+    //   Cookies.set('propertyNameStore', `${propertyID}`); 
+    //   router.push('/dashboard/invest'); 
+    // };
 
-    const handleInvestClick = () => {
-      Cookies.set('propertyNameStore', `${propertyName}`); 
-      router.push('/dashboard/invest'); 
-    };
+    const { addToCart } = useCartStore();
 
+    
     const [shares, setShares] = useState(250);
     
     const handleIncrease = () => {
@@ -59,6 +64,25 @@ const SinglePropertyPayDetails: React.FC<propertyDetailsProps> = ({
             payValue: `${expectedYearlyAmountNum}`
         },
     ]
+
+    const handleInvestClick = async () => {
+        const token = Cookies.get("auth_token");
+        if (!token) {
+            toast.error("You should login first.");
+            router.push("/auth/login"); // Navigate to login page
+            return;
+        }
+        const investmentAmount = shares;
+        try {
+            await addToCart(propertyID, investmentAmount);
+            Cookies.set('propertyNameStore', `${propertyID}`); 
+            router.push('/dashboard/invest');
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (error: any) {
+            const errorMessage = error?.response?.message || error.message || "An unknown error occurred.";
+        toast.error(`Error adding item to cart: ${errorMessage}`);
+        }
+    };
   return (
     <div className={`${styles.singlePropertyPayDetails_handler}`}> 
         <div className="w-full ">
@@ -142,7 +166,7 @@ const SinglePropertyPayDetails: React.FC<propertyDetailsProps> = ({
                 </li>
             </ul>
             <button type='button' onClick={handleInvestClick}>
-            Invest now
+                Add To Cart
             </button>
             <p>
             You won’t be charged yet. <br/>

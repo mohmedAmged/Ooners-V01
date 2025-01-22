@@ -3,7 +3,7 @@ import PaymentMethodsTypes from '../PaymentMethodsTypesSec/PaymentMethodsTypes'
 import styles from './choosePaymentDetails.module.css'
 import OtherPaymentMethod from '../OtherPaymentMethodSec/OtherPaymentMethod'
 import CartPaymentDetails from '../CartPaymentDetailsSec/CartPaymentDetails'
-export default function ChoosePaymentDetails({ propertyName }: { propertyName: string }) {
+export default function ChoosePaymentDetails() {
   return (
     <section>
         <div className='singlePropertyAllDetails__handler container py-16 lg:max-w-6xl px-6 m-auto'>
@@ -22,7 +22,7 @@ export default function ChoosePaymentDetails({ propertyName }: { propertyName: s
 
                 {/* Right Column */}
                 <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 p-4 py-10">
-                  <CartPaymentDetails propertyName={propertyName}/>
+                  <CartPaymentDetails />
                 </div>
             </div>
         </div>
